@@ -20,6 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="launch normal"
+            android:onClick="onClick"
             />
 
         <Button
@@ -27,6 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="launch unresizable"
+            android:onClick="onClick"
             />
 
         <Button
@@ -34,6 +36,31 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="launch browser adjacent"
+            android:onClick="onClick"
+            />
+
+        <Button
+            android:id="@+id/button_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="launch fixed"
+            android:onClick="onClick"
+            />
+
+        <Button
+            android:id="@+id/button_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="unresizable in the task"
+            android:onClick="onClick"
+            />
+
+        <Button
+            android:id="@+id/button_6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="launch normal adjacent"
+            android:onClick="onClick"
             />
 
 

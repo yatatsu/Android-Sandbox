@@ -19,6 +19,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".BasicActivity"
+            android:taskAffinity=""
+            />
+        <activity android:name=".UnresizableActivity"
+            android:resizeableActivity="false"
+            android:taskAffinity=""
+            />
+        <activity android:name=".FixedActivity"
+            android:screenOrientation="portrait"
+            android:taskAffinity=""
+            />
     </application>
 
 </manifest>
