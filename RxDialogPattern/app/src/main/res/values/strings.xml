@@ -1,0 +1,8 @@
+<resources>
+  <string name="app_name">RxDialogPattern</string>
+  <string name="dialog_a">This is A dialog</string>
+  <string name="dialog_b">This is B dialog</string>
+  <string name="message">Lorem ipsum</string>
+  <string name="positive">OK</string>
+  <string name="negative">CANCEL</string>
+</resources>
