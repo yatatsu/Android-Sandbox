@@ -22,10 +22,14 @@ public enum DialogEventBus {
     bus.onNext(tag);
   }
 
+  public Observable<String> observeAll() {
+    return bus;
+  }
+
   public Observable<String> observe(final String tag) {
     return bus.filter(new Func1<String, Boolean>() {
       @Override public Boolean call(String s) {
-        return tag == null || tag.equals(s);
+        return tag != null && tag.equals(s);
       }
     });
   }

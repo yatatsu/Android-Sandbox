@@ -9,6 +9,7 @@ import rx.subscriptions.CompositeSubscription;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
+  private static final String TAG = "MainActivity";
   private static final String TAG_A = "TAG_A";
   private static final String TAG_B = "TAG_B";
   private CompositeSubscription subscriptions = new CompositeSubscription();
@@ -22,7 +23,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     super.onResume();
     subscriptions.add(DialogEventBus.POSITIVE.observe(TAG_A).subscribe(new Action1<String>() {
       @Override public void call(String s) {
-        Log.i(TAG_A, "onclick positive");
+        Log.i(TAG, "onclick positive " + s);
+      }
+    }));
+    subscriptions.add(DialogEventBus.DISMISS.observe(TAG_B).subscribe(new Action1<String>() {
+      @Override public void call(String s) {
+        Log.i(TAG, "dismiss dialog " + s);
+      }
+    }));
+    subscriptions.add(DialogEventBus.CANCEL.observeAll().subscribe(new Action1<String>() {
+      @Override public void call(String s) {
+        Log.i(TAG, "cancel dialog " + s);
       }
     }));
   }
